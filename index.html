@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Aneesh Indira: IT Specialist, Network Engineer, and Full-Stack Developer creating scalable enterprise solutions.">
+    <title>Aneesh Indira | IT Specialist & Network Engineer</title>
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <header class="glass-header">
+        <nav class="nav-container">
+            <a href="#home" class="logo cyan-text"
+                style="text-decoration: none; display: flex; align-items: center; margin-left: -20px;"
+                aria-label="Home">
+                <svg width="90" height="90" viewBox="0 0 240 240">
+                    <defs>
+                        <style>
+                            .ai-logo-path {
+                                fill: none;
+                                stroke: currentColor;
+                                stroke-width: 18;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                            }
+
+                            .ai-logo-sparkle {
+                                fill: currentColor;
+                            }
+                        </style>
+                    </defs>
+                    <g transform="translate(10, 10)">
+                        <!-- Outer Box -->
+                        <path class="ai-logo-path"
+                            d="M 100,180 L 50,180 C 30,180 20,170 20,150 L 20,50 C 20,30 30,20 50,20 L 150,20 C 170,20 180,30 180,50 L 180,100" />
+                        <!-- Letter A -->
+                        <path class="ai-logo-path" d="M 60,140 L 85,60 L 110,140" />
+                        <path class="ai-logo-path" d="M 72,115 L 98,115" />
+                        <!-- Letter I -->
+                        <path class="ai-logo-path" d="M 140,60 L 140,140" />
+                        <!-- Sparkle -->
+                        <path class="ai-logo-sparkle"
+                            d="M 175,115 Q 175,175 235,175 Q 175,175 175,235 Q 175,175 115,175 Q 175,175 175,115 Z" />
+                    </g>
+                </svg>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="mobile-toggle" id="mobile-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-spacing">
+            <div class="hero-content">
+                <div class="hero-text" style="padding: 20px 0;">
+                    <p class="hero-greeting cyan-text"
+                        style="font-family: var(--font-heading); font-weight: 700; letter-spacing: 2px; margin-bottom: 5px;">
+                        HELLO, I'M</p>
+                    <h1 class="headline-name"
+                        style="font-family: var(--font-heading); font-size: clamp(2.0rem, 4.2vw, 3.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: 2px;">
+                        <span class="first-name" style="color: var(--oxygen-white);">ANEESH</span>
+                        <span class="last-name" style="color: var(--anti-gravity-cyan);">INDIRA</span>
+                    </h1>
+                    <h2 class="sub-headline"
+                        style="font-family: var(--font-heading); font-size: clamp(1rem, 2vw, 1.3rem); font-weight: 700; color: #cbd5e1; margin-bottom: 20px;">
+                        IT Specialist, Network Engineer & Full-Stack Developer</h2>
+
+                    <p class="hero-description"
+                        style="color: #94A3B8; font-size: 0.95rem; max-width: 550px; line-height: 1.6; margin-bottom: 35px;">
+                        Expertise in Enterprise Networking, System Administration & Modern Web Development. Transforming
+                        complex infrastructure into robust digital solutions. Passionate about efficiency, reliable
+                        networks, and coding.
+                    </p>
+
+                    <div class="hero-socials" style="display: flex; gap: 15px; margin-bottom: 35px;">
+                        <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-circle">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-circle">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:admin@domain.com" aria-label="Email" class="social-circle">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-actions" style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+                        <a href="https://drive.google.com/file/d/16OwNKGGwhahZsewOQHJEhEDSRNT4XSOC/view?usp=drive_link"
+                            target="_blank" class="btn-solid">Resume</a>
+                        <a href="#projects" class="btn-outline">View My Work</a>
+                        <a href="#contact" class="btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="assets/aneesh-profile.png" alt="Aneesh Indira Professional Portrait"
+                        class="profile-photo floating-element">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about section-spacing grid-bg">
+            <div class="glass-panel panel-lift text-center warp-field">
+                <h2 class="section-title" style="width: 100%;"><span
+                        style="color: var(--anti-gravity-cyan);">ABOUT</span> ME</h2>
+                <p class="about-text">
+                    I am a Computer Network and Systems Technician with over 5 years of experience in IT support,
+                    enterprise networking, and systems administration. Currently working with Dubai Airports, I manage
+                    complex IT infrastructure including ANPR parking systems, enterprise networks, server environments,
+                    and CCTV deployments.
+
+                    My expertise includes Cisco networking, Windows Server administration, network security,
+                    virtualization, and infrastructure monitoring. I also have experience in Full-Stack Web Development,
+                    building modern web applications using technologies such as Node.js, Express.js, MongoDB, and modern
+                    front-end frameworks. I have strong experience configuring Layer 2/Layer 3 networks, implementing
+                    secure IT solutions, and maintaining high-availability systems in mission-critical environments.
+
+                    I am passionate about network engineering, software development, automation, and modern
+                    infrastructure technologies, continuously expanding my knowledge in CCNP-level networking, SD-WAN,
+                    cloud technologies, advanced security solutions, and scalable web application development.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-spacing">
+            <h2 class="section-title text-center" style="width: 100%;"><span
+                    style="color: var(--anti-gravity-cyan);">SKILLS</span> & EXPERTISE</h2>
+            <div class="skills-grid">
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-network-wired cyan-text"></i></div>
+                    <h3>Network Administration</h3>
+                    <p>Cisco, VLAN, OSPF, BGP, EIGRP, STP, HSRP/VRRP/GLBP</p>
+                    <div class="skill-tooltip">Enterprise Routing & Switching</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-route cyan-text"></i></div>
+                    <h3>Advanced Networking</h3>
+                    <p>SD-WAN, MPLS, VXLAN, DMVPN, GRE/IPsec, VRF, NAT/PAT, QoS</p>
+                    <div class="skill-tooltip">Complex Network Topologies</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-shield-halved cyan-text"></i></div>
+                    <h3>Network Security</h3>
+                    <p>FortiGate NGFW, ACLs, Port Security, DHCP Snooping, AAA (RADIUS/TACACS+)</p>
+                    <div class="skill-tooltip">Threat Prevention & AAA</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-wifi cyan-text"></i></div>
+                    <h3>Wireless & Monitoring</h3>
+                    <p>Enterprise Wi-Fi, WLC, WPA3, DNS, DHCP, SNMP, NetFlow, PRTG</p>
+                    <div class="skill-tooltip">Infrastructure Visibility & Wireless</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-server cyan-text"></i></div>
+                    <h3>Systems Administration</h3>
+                    <p>Windows Server (AD DS, GPO, DHCP, DNS, RDS, WSUS), Backup & Recovery</p>
+                    <div class="skill-tooltip">Enterprise Infrastructure Maintenance</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-cloud cyan-text"></i></div>
+                    <h3>Virtualization & Cloud</h3>
+                    <p>VMware, Hyper-V, Docker, Cisco DNA Center, Ansible, REST APIs</p>
+                    <div class="skill-tooltip">Modern Infrastructure Deployment</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-headset cyan-text"></i></div>
+                    <h3>IT Support</h3>
+                    <p>Hardware/Software, Endpoint Security, VPN, BSOD resolution</p>
+                    <div class="skill-tooltip">L2 Support & Issue Resolution</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-video cyan-text"></i></div>
+                    <h3>Surveillance & Access</h3>
+                    <p>CCTV, NVR/DVR, RFID access control</p>
+                    <div class="skill-tooltip">Physical Security Systems</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-plug cyan-text"></i></div>
+                    <h3>Structured Cabling</h3>
+                    <p>Ethernet (CAT5e/CAT6), Fiber Optics, Fusion Splicing</p>
+                    <div class="skill-tooltip">Physical Layer Management</div>
+                </div>
+                <div class="skill-card glass-panel panel-lift group">
+                    <div class="skill-icon"><i class="fa-solid fa-phone cyan-text"></i></div>
+                    <h3>IP Telephony</h3>
+                    <p>Yealink, Grandstream, SIP Trunking</p>
+                    <div class="skill-tooltip">Voice Over IP Integration</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section-spacing">
+            <h2 class="section-title text-center" style="width: 100%;">EXPERIENCE</h2>
+            <div class="timeline">
+                <div class="timeline-cable"></div>
+                <div class="timeline-item glass-panel panel-lift">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <h3><i class="fa-solid fa-plane-departure cyan-text"></i> Computer Network and System Technician
+                        </h3>
+                        <p class="company">MAWGIF (Dubai Airports) | 2022 - Present</p>
+                        <ul class="timeline-details">
+                            <li>Managed ANPR systems (ARH Engine) including server installation, licensing, and camera
+                                integration.</li>
+                            <li>Deployed and maintained Windows Embedded and Windows Server 2019 environments for
+                                parking
+                                management applications.</li>
+                            <li>Configured and optimized Layer 2/3 network infrastructure, including Cisco switches,
+                                routers, Advantech devices, and UniFi
+                                wireless networks.</li>
+                            <li>Installed, configured, and supported CCTV (Avigilon, Axis, TKH) and RFID-based access
+                                control systems.</li>
+                            <li>Maintained and troubleshot parking hardware such as ticket dispensers, ticket verifier,
+                                APMs, barriers, and banknote recyclers.</li>
+                            <li>Executed Ethernet and fiber cabling including crimping, termination, and fusion
+                                splicing.</li>
+                            <li>Monitored systems using PRTG, VNC, and proprietary platforms to ensure high
+                                availability.</li>
+                            <li>Delivered Tier 2/3 technical support and maintained detailed technical documentation.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item glass-panel panel-lift">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <h3><i class="fa-solid fa-building cyan-text"></i> IT Support Technician</h3>
+                        <p class="company">Tech Store Solutions (P)Ltd. | 2019 - 2021</p>
+                        <ul class="timeline-details">
+                            <li>Installed, configured, and supported desktops, laptops, servers, printers, and
+                                enterprise applications.</li>
+                            <li>Administered Active Directory, including user accounts, groups, and access permissions.
+                            </li>
+                            <li>Diagnosed and resolved hardware, software, and network issues; performed preventive
+                                maintenance and upgrades.</li>
+                            <li>Assisted with OS and application deployments, patch management, and updates across the
+                                organization.</li>
+                            <li>Delivered remote and on-site technical support for end users, ensuring minimal downtime.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item glass-panel panel-lift">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <h3><i class="fa-solid fa-wifi cyan-text"></i> Internet Installation Executive</h3>
+                        <p class="company">YesPee Teleservices | 2015 - 2019</p>
+                        <ul class="timeline-details">
+                            <li>Executed over 120 broadband installations per month, maintaining high SLA and customer
+                                satisfaction standards.</li>
+                            <li>Installed, configured, and tested routers, modems, and home/SME network infrastructure
+                                for secure connectivity.</li>
+                            <li>Performed structured cabling (CAT5e/CAT6) and fiber optic installations, including
+                                termination, fusion splicing, and testing.</li>
+                            <li>Maintained and troubleshot copper and fiber networks to ensure optimal performance and
+                                uptime.</li>
+                            <li>Assisted customers with network troubleshooting and provided technical guidance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-spacing">
+            <h2 class="section-title text-center" style="width: 100%;"><span
+                    style="color: var(--anti-gravity-cyan);">FEATURED</span> PROJECTS</h2>
+            <div class="projects-grid">
+                <div class="project-card glass-panel panel-lift">
+                    <div class="project-img-wrapper">
+                        <img src="assets/mob-cart.png" alt="E-Commerce Website Mob-Cart" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>Developed a comprehensive e-commerce platform featuring product listings, shopping cart
+                            functionality, and secure checkout.</p>
+                    </div>
+                </div>
+                <div class="project-card glass-panel panel-lift">
+                    <div class="project-img-wrapper">
+                        <img src="assets/portfolio.png" alt="portfolio website" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>Developed a personal portfolio website using HTML, Vanilla CSS, and JavaScript with
+                            glassmorphism.</p>
+                    </div>
+                </div>
+                <div class="project-card glass-panel panel-lift">
+                    <div class="project-img-wrapper">
+                        <img src="assets/Indoor-PGS.png" alt="parking guidance system" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Parking Guidance System</h3>
+                        <p>Installed and configured TKH cameras, TKH and Advantech switches, and deployed VMS
+                            operations. (Duration: 2 months)</p>
+                    </div>
+                </div>
+                <div class="project-card glass-panel panel-lift">
+                    <div class="project-img-wrapper">
+                        <img src="assets/ANPR.jpeg" alt="ANPR Setup" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>ARH & Candid ANPR Setup</h3>
+                        <p>Successfully managed the installation and configuration of 30+ ARH ANPR Cameras and 2 Candid
+                            cameras for robust tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education/Certifications Section -->
+        <section id="education" class="education section-spacing">
+            <h2 class="section-title text-center" style="width: 100%;"><span
+                    style="color: var(--anti-gravity-cyan);">EDUCATION</span> & CERTIFICATIONS</h2>
+            <div class="cert-grid">
+                <div class="cert-flip-card">
+                    <div class="cert-inner">
+                        <div class="cert-front glass-panel">
+                            <h3>CCNA 200-301</h3>
+                            <p class="cert-tag warning-amber">Routing & Switching</p>
+                        </div>
+                        <div class="cert-back glass-panel warning-border">
+                            <p class="date">Technovalley</p>
+                            <p>Advanced knowledge in enterprise networking, OSPFv3, BGP, QoS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-flip-card">
+                    <div class="cert-inner">
+                        <div class="cert-front glass-panel">
+                            <h3>CCNP</h3>
+                            <p class="cert-tag cyan-text">ENCOR & ENARSI</p>
+                        </div>
+                        <div class="cert-back glass-panel cyan-border">
+                            <p class="date">Udemy</p>
+                            <p>Specialized in networking and system administration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-flip-card">
+                    <div class="cert-inner">
+                        <div class="cert-front glass-panel">
+                            <h3>FortiGate NSE4</h3>
+                            <p class="cert-tag warning-amber">Version 7</p>
+                        </div>
+                        <div class="cert-back glass-panel warning-border">
+                            <p class="date">Udemy</p>
+                            <p>Focus on security fundamentals and logic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-flip-card">
+                    <div class="cert-inner">
+                        <div class="cert-front glass-panel">
+                            <h3>Win Server Admin</h3>
+                            <p class="cert-tag cyan-text">2019</p>
+                        </div>
+                        <div class="cert-back glass-panel cyan-border">
+                            <p class="date">Udemy</p>
+                            <p>Server management and administration fundamentals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-flip-card">
+                    <div class="cert-inner">
+                        <div class="cert-front glass-panel">
+                            <h3>CompTIA A+</h3>
+                            <p class="cert-tag warning-amber">Core 1 & 2</p>
+                        </div>
+                        <div class="cert-back glass-panel warning-border">
+                            <p class="date">Udemy</p>
+                            <p>IT Infrastructure and operational procedures.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-flip-card">
+                    <div class="cert-inner">
+                        <div class="cert-front glass-panel">
+                            <h3>Diploma</h3>
+                            <p class="cert-tag cyan-text">Computer Eng.</p>
+                        </div>
+                        <div class="cert-back glass-panel cyan-border">
+                            <p class="date">2016-2018</p>
+                            <p>Govt. Polytechnic College Vechoochira.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-spacing">
+            <h2 class="section-title text-center" style="width: 100%; border-bottom: none;"><span
+                    style="color: var(--anti-gravity-cyan);">Get</span> In Touch</h2>
+            <div class="contact-split-layout">
+                <div class="contact-info-side">
+                    <h3 style="font-size: 2.2rem; margin-bottom: 20px; font-family: var(--font-heading);">Let's Talk
+                    </h3>
+                    <p
+                        style="color: #94A3B8; font-size: 0.95rem; line-height: 1.8; margin-bottom: 40px; max-width: 90%;">
+                        Have a project in mind or want to collaborate? I'm always open to discussing new projects,
+                        creative ideas or opportunities to be part of your visions.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method"
+                            style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                            <i class="fa-solid fa-envelope"
+                                style="color: var(--anti-gravity-cyan); font-size: 1.2rem;"></i>
+                            <span
+                                style="font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem;">aneeshi121@gmail.com</span>
+                        </div>
+                        <div class="contact-method" style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fa-solid fa-location-dot"
+                                style="color: var(--anti-gravity-cyan); font-size: 1.2rem;"></i>
+                            <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem;">Dubai,
+                                UAE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-side glass-panel panel-lift"
+                    style="padding: 40px; background: rgba(15, 23, 42, 0.6);">
+                    <form class="contact-form" action="#" method="POST"
+                        onsubmit="event.preventDefault(); alert('Message Sent Successfully!');">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Your Message"></textarea>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <button type="submit" class="btn-solid"
+                                style="cursor: pointer; border: none; padding: 14px 35px; width: auto; font-size: 1rem;">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer glass-panel">
+        <div class="footer-content">
+            <p>&copy; 2026 Aneesh Indira. Defying the weight of technical downtime.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-link"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-link"><i
+                        class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
