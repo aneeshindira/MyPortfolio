@@ -20,8 +20,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
-    /* Custom Cursor */
+}
+
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+    * {
+        cursor: none;
+    }
 }
 
 /* Scroll Smoothing */
@@ -121,6 +125,7 @@ ul {
 
 /* Custom Cursor */
 .custom-cursor {
+    display: none;
     width: 10px;
     height: 10px;
     background: var(--anti-gravity-cyan);
@@ -133,6 +138,7 @@ ul {
 }
 
 .cursor-follower {
+    display: none;
     width: 30px;
     height: 30px;
     border: 1px solid var(--anti-gravity-cyan);
@@ -142,6 +148,12 @@ ul {
     z-index: 9998;
     transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s, transform 0.1s linear, opacity 0.2s;
+}
+
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+    .custom-cursor, .cursor-follower {
+        display: block;
+    }
 }
 
 body:active .cursor-follower {
