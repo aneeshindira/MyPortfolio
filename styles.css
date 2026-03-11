@@ -179,6 +179,17 @@ body:active .cursor-follower {
 }
 
 /* Header & Nav */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: var(--space-void);
+    z-index: 999;
+}
+
 .glass-header {
     position: fixed;
     top: 15px;
