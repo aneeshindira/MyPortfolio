@@ -179,30 +179,15 @@ body:active .cursor-follower {
 }
 
 /* Header & Nav */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    background: var(--space-void);
-    z-index: 999;
-}
-
 .glass-header {
     position: fixed;
-    top: 15px;
-    width: 96%;
-    max-width: 1400px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 20px;
-    border: none;
+    top: 0;
+    width: 100%;
     z-index: 1000;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
-    height: var(--nav-height);
+    height: calc(var(--nav-height) + 15px);
+    padding-top: 15px;
     display: flex;
     justify-content: center;
 }
@@ -902,6 +887,66 @@ body::before {
 
 .submit-btn:hover::before {
     width: 100%;
+}
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 30px 40px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(34, 211, 238, 0.05);
+    border: 1px solid var(--glass-border);
+}
+
+.modal-title {
+    color: var(--anti-gravity-cyan);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.modal-text {
+    color: var(--oxygen-white);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.modal-close-btn {
+    background: linear-gradient(135deg, #0BA5E9, var(--anti-gravity-cyan));
+    color: var(--oxygen-white);
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+}
+
+.modal-close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.6);
 }
 
 /* Footer */
